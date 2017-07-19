@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_roaming_control"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_rocker"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:text="滑动坐标"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_rocker"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true">
+
+        <com.example.mllwf.virtualgamehandle.custorm.RockerView
+            android:id="@+id/rv_rocker"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:id="@+id/iv_up"
+            style="@style/iv_roaming_direction"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_xiangshang" />
+
+        <ImageView
+            android:id="@+id/iv_down"
+            style="@style/iv_roaming_direction"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/icon_xiangxia" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
